@@ -1,0 +1,300 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+/* style rule only applies for screens between 200-767 px - AKA phonescreens */
+@media only screen and (min-width: 200px) and (max-width: 767px)
+{
+    .navbar {
+        height: 55px
+    }
+    .navbar .nav-item {
+        padding-left: 5px;
+    }
+
+    .navbar .nav-item2 {
+        height:40px;
+    }
+}
+
+.navbar .nav-link {
+    color: #718096 !important;
+}
+
+.active .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar .active .nav-link:hover {
+  color: #718096 !important;
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+
+
+/* website background color */
+
+body {
+  background-color: #181818  !important;
+}
+
+/* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+
+/* style rule only applies for screens between 200-767 px - AKA phonescreens */
+
+.card {
+    border: 0;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover !important;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 766px) {
+    .card-img-top {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover !important;
+    }
+
+    @media only screen and (min-width: 200px) and (max-width: 767px) {
+        #content-image1
+        {position:relative; top:0px; right:15px; width:100%; object-fit: contain;
+            overflow-x: hidden !important;
+        }
+    }
+
+    @media only screen and (min-width: 200px) and (max-width: 767px) {
+        #content-image2
+        {position:relative; top:0px; right:15px; width:100%; object-fit: contain;
+            overflow-x: hidden !important;
+        }
+    }
+
+    @media only screen and (min-width: 200px) and (max-width: 767px) {
+        #content-image3 {position:relative; top:0px; right:15px; width:100%; object-fit: contain;
+            overflow-x: hidden !important;
+        }
+    }
+
+}
+
+.centered {
+  position: absolute; /* or absolute */
+  top: 40%;
+  left: 30%;
+  /* bring your own prefixes */
+}
+
+.centered-p {
+  position: absolute; /* or absolute */
+  top: 50%;
+  left: 30%;
+  /* bring your own prefixes */
+}
+
+@media only screen and (min-width: 200px) and (max-width: 766px) {
+    .centered-p {
+        left: 5%;
+        }
+
+}
+
+
+.container2 {
+    position: absolute;
+    left: 5%;
+    top: 30%;}
+
+@media only screen and (min-width: 200px) and (max-width: 766px) {
+    .container2 {
+        top: 40%;
+        overflow-x: hidden !important;
+        }
+
+}
+
+.container3 {
+    position: absolute;
+    left: 3%;
+    top: 48%;
+    overflow-x: hidden !important;
+}
+
+
+@media only screen and (min-width: 200px) and (max-width: 766px) {
+    .container3 {
+        top: 40%;
+        overflow-x: hidden !important;
+        }
+
+}
+
+.card {
+    position: relative;
+    width: 40vh;
+    height: 56vh !important;
+    background-size: cover;
+    background-color: transparent !important;
+    border-color: transparent;
+    border-radius: 12px !important;
+    background-position:center;
+    overflow: hidden;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 90vh; /* These two lines are counted as one :-)       */
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1500px) {
+    .card {
+        width:40vh
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+    .card {
+        box-shadow: none;
+        padding-top: 0% !important;
+        width: 110%;
+        height: 14rem !important;
+        right: 20px !important;
+        border: none !important;
+        background-color: transparent !important;
+        border-radius:0px !important;
+        overflow:hidden;
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+    .card-header {
+        background: none !important;
+        border: none !important;
+        border-radius:0px !important;
+    }
+}
+
+    /*  Assigning properties to inner
+        content of card  */
+    .card__inner {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.1)) !important;
+        color: #fff;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 1;
+        opacity: 0;
+        padding: 2rem 1.3rem 2rem 2rem;
+        transition: all 0.4s ease 0s;
+    }
+
+    /*  On hovering card opacity
+        of content must be 1*/
+    .card:hover .card__inner {
+        opacity: 1;
+    }
+
+    .card:hover .card__inner h2 {
+        opacity: 1;
+    }
+
+    .card:hover .card__inner p {
+        opacity: 1;
+    }
+
+    /*  General property for heading
+        and paragraph*/
+    .card__inner h2 {
+        text-align: center;
+        transition: all 0.4s ease 0s;
+    }
+
+    .card__inner p {
+        height: 87%;
+        font-weight: 200;
+        text-align: center;
+        line-height: 2.5rem;
+        transition: all 0.4s ease 0s;
+    }
+
+    @media only screen and (min-width: 767px) {
+        .card {
+            top: 28% !important;}
+        .card__inner h2 {
+            padding-top: 45vh !important;
+        }
+
+        .card__inner p {
+            margin-top: -0.50rem !important;
+        }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1500px){
+        .card__inner h2 {
+            padding-top: 40vh !important;
+        }
+
+        .card__inner p {
+            margin-top: -0.50rem !important;
+        }
+    }
+
+    @media only screen and (min-width: 200px) and (max-width: 766px) {
+        .card__inner h2 {
+            padding-top: 100px !important;
+        }
+
+        .card__inner p {
+            margin-top: -0.50rem !important;
+        }
+    }
+/*
+*
+* ==========================================
+* website body
+* ==========================================
+ */
+.gray-text-color {
+    color: #718096 !important;
+    text-decoration: none !important;
+}
+
+.link-text-color {
+    color: #718096 !important;
+    text-decoration: none !important;
+}
+
+.link-text-color:hover   {
+    color: #718096 !important;
+    text-decoration: underline !important;
+}
+
+
+.fa:hover {
+  /* Change color on hover */
+  color: #718096;
+    transition: all 0.4s ease 0s;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+html h1 {
+  font-size: 3rem;
+}
+
+html h2 {
+  font-size: 2rem;
+}

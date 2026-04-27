@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>David Portfolio</title>
+
+    <!-- static loading there has to be a better way but idk -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <!-- favicon browser stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/curlingironcats/dhang-dev-static@master/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/curlingironcats/dhang-dev-static@master/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/curlingironcats/dhang-dev-static@master/favicon-16x16.png">
+    <link rel="manifest" href="https://cdn.jsdelivr.net/gh/curlingironcats/dhang-dev-static@master/site.webmanifest">
+    <!------------------------ -->
+
+</head>
+
+<!-- Header/Background image with fadeout gradient applied -->
+
+
+  <style type='text/css'>
+    #bg-image { position:absolute; top:57px; left:0; width:100%; height:50%; object-fit: cover}
+    #bg-image {
+      -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.2)), to(rgba(0,0,0,0)));
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+    @media only screen and (min-width: 200px) and (max-width: 767px) {
+        #bg-image {
+            position:absolute; top:55px; left:0; width:100%; height:40%; object-fit:cover
+        }
+    }
+  </style>
+
+<img id="bg-image" src="assets/images/pomomon.png" />
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
+
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+
+<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+<!-------------------- Page content ------------------->
+    <!-------------------------------------------------------------------------->
+</head>
+
+<!-- body tag specifies contains the content that will actually be shown on the webpage -->
+<body>
+
+<!-- nav tag specifies the code for the navigation bar at the top of the page -->
+<!-- all of the green text in quotes are known as "selectors" -->
+<!-- think of selectors as style rules/instructions for building the look and feel of the navbar -->
+<!-- make the navbar expand, make it light with a light background, set a margin of 4 with a border, etc.-->
+<nav class="navbar navbar-default navbar-expand-md py-0 border-bottom border-dark" style="background-color: #181818!important;">
+    <!-- div tag is short for division -->
+    <!-- it is called division because you build a webpage by dividing it into parts/blocks that can fit content-->
+    <!-- you apply style/behavior rules to each part/block -->
+    <!-- any selectors in a div tag will apply to the content that follows until we close it with a </div> tag -->
+    <div class="container-fluid">
+        <li class="nav-item active list-unstyled">
+            <a class="nav-link" href="index.html">
+                <h4 class="px-sm-3 margin-top mt-2 fw-bold">David Portfolio</h4>
+            </a>
+        </li>
+
+        <!-- define a button that appears if the browser window is too narrow to display the whole navigation bar horizontally-->
+
+
+        <!-- we have another div tag = another section or block of the website content -->
+        <!-- this block is the part of the navigation bar that can collapse depending on the size of the browser window-->
+        <div class="navbar" id="navbar">
+            <!-- every link or element we need on the bar can be included as an item in an unordered list -->
+
+            <!-- the ms-auto selector pushes this group of links to the right side of the window -->
+            <ul class="navbar ms-auto mb-md-0 list-unstyled">
+
+                <!-- for each item we want to add to the navbar, we need to create a list <li> -->
+
+                <!-- if user is authenticated (logged in) we show a greeting message and the logout button
+                instead of register/login links -->
+                <li class="nav-item2 {% if request.path == home_url %} active {%endif%}">
+                    <a class="nav-link text-white px-sm-0 px-3" href="index.html">
+                        Work
+                    </a>
+                </li>
+
+                <li class="nav-item2 {% if request.path == about_url %} active {%endif%}">
+                    <a class="nav-link text-white px-md-4 px-1" href="about.html">
+                        About
+                    </a>
+                </li>
+
+
+            </ul> <!-- end of account-related links -->
+
+        </div> <!-- closes collapsable/'mini text' parts of navbar-->
+
+    </div> <!-- closes navbar block/container -->
+
+</nav> <!-- end of navbar -->
+
+<nav class="navbar navbar-default navbar fixed-bottom" style="background-color: transparent !important;">
+    <!-- div tag is short for division -->
+    <!-- it is called division because you build a webpage by dividing it into parts/blocks that can fit content-->
+    <!-- you apply style/behavior rules to each part/block -->
+    <!-- any selectors in a div tag will apply to the content that follows until we close it with a </div> tag -->
+    <div class="container-fluid">
+        <li class="nav-item active list-unstyled">
+        </li>
+
+        <!-- define a button that appears if the browser window is too narrow to display the whole navigation bar horizontally-->
+
+
+        <!-- we have another div tag = another section or block of the website content -->
+        <!-- this block is the part of the navigation bar that can collapse depending on the size of the browser window-->
+        <div class="navbar2" id="navbar2">
+            <!-- every link or element we need on the bar can be included as an item in an unordered list -->
+
+            <!-- the ms-auto selector pushes this group of links to the right side of the window -->
+            <ul class="navbar ms-auto mb-md-0 list-unstyled">
+
+                <!-- for each item we want to add to the navbar, we need to create a list <li> -->
+
+                <!-- if user is authenticated (logged in) we show a greeting message and the logout button
+                instead of register/login links -->
+                <li class="nav-item2 {% if request.path == home_url %} active {%endif%}">
+                    <a class="navbar-brand text-white" href="https://www.linkedin.com/in/curlingironcats/">
+                        <i class="fa icon-linkedin"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item2 {% if request.path == about_url %} active {%endif%}">
+                    <a class="navbar-brand text-white" href="https://github.com/curlingironcats">
+                        <i class="fa icon-github"></i>
+                    </a>
+                </li>
+
+
+            </ul> <!-- end of account-related links -->
+
+        </div> <!-- closes collapsable/'mini text' parts of navbar-->
+
+    </div> <!-- closes navbar block/container -->
+
+</nav> <!-- end of navbar -->
+
+<!-- the rest of base.html contains the main body of the website page -->
+
+<!-- MAIN - used for the most significant bulk of a website page -->
+<!-- "container" - a simple way to group together items on a page -->
+<main>
+
+    <div class="container3">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-xs-4 col-sm-6">
+
+            <h1 class="text-white pb-5 fw-bold" data-aos="fade-down" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" data-aos-duration="500">
+                Pomomon</h1>
+
+            <h3 class="text-white pb-0 fw-bold" data-aos="fade" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" data-aos-delay="1000"><span class="gray-text-color">
+                Personal</span> Project</h3>
+
+            <p class="text-white fs-5 mt-4  " data-aos="fade" data-aos-delay="1000" data-aos-offset="-1000">
+                <a class="link-text-color" href="https://github.com/curlingironcats/pomodoro-mon">Pomomon</a> is my very first project that I developed after learning the basics of Python.
+                It is a simple timer application designed by myself using the <a class="link-text-color" href="https://docs.python.org/3/library/tkinter.html">Tkinter</a> framework.
+
+            <p class="text-white fs-5 py-0" data-aos="fade" data-aos-delay="1000" data-aos-offset="-1000">
+            As a chronic procrastinator, the Pomodoro time management method has really helped me stick with my studies.</p>
+            </p>
+
+            <p class="text-white fs-5" data-aos="fade" data-aos-delay="1000" data-aos-offset="-1000">
+
+                <img id="content-image2" src="assets/images/pomomonpage.png" class="img-fluid py-3" alt="Responsive image">
+
+            <p class="text-white fs-5 py-4" data-aos="fade" data-aos-delay="1000" data-aos-offset="-1500">
+                I learned a lot about Tkinter GUI and the distribution of Python files as executables while working on Pomomon.
+                I also created the pixel art designs for the project. I believe Pomomon showcases my well rounded skills as a developer and designer.
+                &nbsp;
+            </p>
+
+            <p class="text-white fs-5 py-4" data-aos="fade" data-aos-delay="1000" data-aos-offset="-1500">
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+            </p>
+
+            </p>
+
+
+        </div>
+
+        <div class="col-lg-4"></div>
+
+  </div>
+</div>
+</div>
+
+</main>
+
+<!------------------- end of page content ------------------------->
+
+</body>
+</html>
