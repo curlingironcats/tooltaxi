@@ -68,8 +68,11 @@
     <!-- any selectors in a div tag will apply to the content that follows until we close it with a </div> tag -->
     <div class="container-fluid">
         <li class="nav-item active list-unstyled">
-            <a class="nav-link" href="index.html">
-                <h4 class="px-sm-3 margin-top mt-2 fw-bold">ToolTaxi - CS321 - Group 5</h4>
+            <a class="nav-link1" href="index.html">
+                <h4 class="px-sm-3 margin-top mt-2 fw-bold">
+                    <img class="img-raised" src="assets/images/tooltruck.png" alt="ToolTaxi Logo" height="60">
+                    ToolTaxi
+                </h4>
             </a>
         </li>
 
@@ -147,7 +150,7 @@
                 instead of register/login links -->
 
                 <li class="nav-item2 {% if request.path == about_url %} active {%endif%}">
-                    <a class="navbar-brand text-white" href="https://github.com/curlingironcats">
+                    <a class="navbar-brand text-white" href="https://github.com/curlingironcats/tooltaxi">
                         <i class="fa icon-github"></i>
                     </a>
                 </li>
@@ -169,18 +172,21 @@
     <!-- put the content of the other templates/website page parts in their own block -->
     <div class="row mx-auto">
 
-    <div class="col-sm-3"></div>
-
-    <div class="col-sm-3">
-        <div class="card" style="width: 18 rem;">
+    <div class="d-flex justify-content-center">
+        <div class="card w-25 mx-5">
             <img class="card-img-top img-raised" src="assets/images/pomomon.png" alt="Open Project 1">
-            <div class="card__inner">
-                <h2 class="fw-bold">ToolTaxi</h2>
-                <p> Project</p>
-                <a href="pomomon.html" class="stretched-link"></a>
-            </div>
         </div>
+
+        <div class="card w-25 border-0">
+        <p class="text-white fs-3 py-5">
+            <b>Everything you need for your next DIY.</b><br>
+            Get a wrench or the whole tool set delivered, or pick up from one of our convenient Tool Sheds.<br>
+            <button type="button" class="btn btn-lg btn-danger mt-5"><b>Rent a tool</b></button>
+        </p>
+        </div>
+
     </div>
+
 
 </div>
 
