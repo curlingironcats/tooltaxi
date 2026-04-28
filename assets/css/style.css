@@ -157,7 +157,7 @@ body {
     border-color: transparent;
     border-radius: 12px !important;
     background-position:center;
-    overflow: hidden;
+    overflow: visible;
     transition: all 0.3s ease !important;
 }
 
@@ -167,13 +167,14 @@ body {
 
 .card p{
     position: relative;
-    width: 45vh;
+    width: 46vh;
     height: 56vh !important;
     background-size: cover;
     background-color: transparent !important;
     border-color: transparent;
     border-radius: 12px !important;
     background-position:center;
+    overflow: visible !important;
 }
 
 .vertical-center {
